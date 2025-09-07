@@ -1,0 +1,5 @@
+/* src/styles/modeTransitions.css */
+
+.transition-slide {
+  transition: all 0.3s ease-in-out;
+}

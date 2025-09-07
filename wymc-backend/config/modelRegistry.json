@@ -1,0 +1,56 @@
+{
+  "models": [
+    {
+      "id": "beepo-22b-q4km",
+      "displayName": "Beepo 22B Q4_K_M",
+      "shortName": "",
+      "family": "llama",
+      "runner": "koboldcpp",
+      "path": "C:\\AI\\Beepo-22B-Q4_K_M.gguf",
+      "params": {},
+      "chatTemplateKey": "llama_chat"
+    },
+    {
+      "id": "beepo-22b-q4ks",
+      "displayName": "Beepo 22B Q4_K_S",
+      "shortName": "",
+      "family": "llama",
+      "runner": "koboldcpp",
+      "path": "C:\\AI\\Beepo-22B-Q4_K_S.gguf",
+      "params": {},
+      "chatTemplateKey": "llama_chat"
+    },
+    {
+      "id": "dolphin-nemo-12b-q5km",
+      "displayName": "Dolphin 2.9.3 (Mistral-Nemo 12B) Q5_K_M",
+      "shortName": "Dolphin 12B Q5_K_M",
+      "family": "mistral",
+      "runner": "koboldcpp",
+      "path": "C:\\AI\\dolphin-2.9.3-mistral-nemo-12b.Q5_K_M.gguf",
+      "params": {},
+      "chatTemplateKey": "mistral_dolphin"
+    },
+    {
+      "id": "violet-lotus-12b-q5km",
+      "shortName": "Violet Lotus 12B Q5_K_M",
+      "displayName": "MN Violet Lotus 12B Q5_K_M",
+      "family": "llama",
+      "runner": "koboldcpp",
+      "path": "C:\\AI\\MN-Violet-Lotus-12B.Q5_K_M.gguf",
+      "params": {},
+      "chatTemplateKey": "llama_chat"
+    }
+  ],
+  "chatTemplates": {
+    "mistral_dolphin": {
+      "system": "<|system|>{text}</s>",
+      "user": "<|user|>{text}</s>",
+      "assistant": "<|assistant|>{text}</s>"
+    },
+    "llama_chat": {
+      "system": "[INST] <<SYS>>\n{text}\n<</SYS>> [/INST]",
+      "user": "[INST] {text} [/INST]",
+      "assistant": "{text}"
+    }
+  }
+}

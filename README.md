@@ -1,49 +1,37 @@
-# Wmcy
+# Wmcy: Local LLM Companion
 
-Wmcy is a personal AI assistant project.  
-The repo is organized into two parts:
+Wmcy (`wym-see`) is a fast, modular AI assistant built for local use — think DevTools meets digital muse. It runs a custom React frontend with Node.js backend, connecting to local models via Ollama, KoboldCpp, or other backends. Designed for experimentation, journaling, prompt engineering, and character emulation.
 
-- **wmcy-ui** – React frontend interface (chat, controls, avatars)
-- **wmcy-backend** – Node/Express backend (LLM routing, memory, file access)
+This monorepo includes:
+- `wymc-ui`: React frontend with Tailwind and dynamic mode switching (General, Debug, Narrative, X-Mode)
+- `wymc-backend`: Node/Express API to manage VRAM, local models, and GPU info
 
----
+### ✨ Core Features
 
-## Getting Started
+- 🔁 **Hot-swap models** via UI (Mistral, Dolphin, KoboldCpp, etc)
+- 📊 **VRAM Monitor** and backend GPU stats
+- 🧠 **Prompt pipelines** (persistent, temporary, X-mode)
+- 🖼️ **Avatar engine** with swappable expressions and states
+- 🧪 **Debug Mode** with token analysis, system self-checks, and dev overrides
+- 🗂️ Reads from Obsidian vaults (planned)
 
-### Frontend
+### 📌 Upcoming Features
+
+- Multi-agent dialogue panel for character chats  
+- “Showcase Mode” for public demos with auto-sandboxing  
+- In-browser command history (`↑` to recall prompt)  
+- LLM Confidence Indicator and Self-Repair Diagnostics  
+- Universe/Character `.json` import for Narrator/X-mode  
+
+### 🚀 Quickstart
 
 ```bash
-cd wmcy-ui
+# Backend
+cd wymc-backend
 npm install
 npm run dev
 
-
-Frontend will start on http://localhost:5173 (default Vite port).
-### Backend
-
-cd wmcy-backend
+# Frontend
+cd ../wymc-ui
 npm install
 npm run dev
-Backend runs on http://localhost:3000 by default.
-
-
-Project Structure
-Wmcy/
-  wmcy-ui/        # React (Vite) frontend
-  wmcy-backend/   # Express backend API
-
-Roadmap
-
- Core chat flow working
-
- Avatar component (UI polish)
-
- File access (Obsidian vault integration)
-
- Model swap support
-
- Debug / diagnostics panel
-
- Notes
-
-This is an early-stage, evolving project. Expect changes as architecture stabilizes.
